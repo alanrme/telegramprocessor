@@ -48,4 +48,11 @@ for (i in messages) {
         }
     }
 }
+
 console.log(result)
+try {
+    fs.writeFileSync("./data.json", JSON.stringify(result))
+    console.log("SAVED TO ./data.json!")
+} catch (err) {
+    console.error(err)
+}
