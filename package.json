@@ -1,0 +1,11 @@
+{
+  "name": "telegramprocessor",
+  "version": "1.0.0",
+  "description": "Processes Telegram chats exported in JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan D'souza",
+  "license": "ISC"
+}
