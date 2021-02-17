@@ -18,7 +18,7 @@ for (i in messages) {
     let message = messages[i]
     let from = message.from
     if (!from && message.action.includes("call")) {
-        addVal("calls", from, 1)
+        addVal("calls", message.actor, 1)
         // phone calls use "actor" for some reason
         continue // skip, go to next loop
     }
@@ -30,7 +30,7 @@ for (i in messages) {
             let type = message.media_type
             if (type == "animation") type = "video_file"
             if (!result.media[type]) result.media[type] = {} // if key doesn't exist make it
-            addVal(`meda.${type}`, from, 1)
+            addVal(`media.${type}`, from, 1)
         } else if ((message.mime_type && message.mime_type.includes("image")) || message.photo) {
             if (!result.media.image) result.media.image = {} // if key doesn't exist make it
             addVal("media.image", from, 1)
