@@ -1,5 +1,5 @@
 const fs = require('fs');
-messages = null;
+let messages;
 try {
     messages = JSON.parse(fs.readFileSync('result.json', 'utf8')).messages;
 } catch (err) {
