@@ -1,3 +1,7 @@
+# App specific
+result.json
+data.json
+
 # Logs
 logs
 *.log
